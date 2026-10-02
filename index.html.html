@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johnvi B | Creative Content Creator & Aspiring Digital Marketer</title>
+<meta name="description" content="Portfolio of Johnvi B, a fresher and creative content creator aspiring to be a Digital Marketing Intern.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN PART - you do not need to touch this.
+   ============================================================ */
+:root{--ink:#2a1650;--purple:#6d3fc7;--deep:#4b2a99;--lav:#b79df0;--soft:#efe8fd;--mist:#f8f5ff;--white:#fff;--muted:#6b5f86}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--purple);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.alt{background:var(--mist)}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);color:var(--deep);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:36px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--soft)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.25rem;color:var(--purple);text-decoration:none}
+.links{display:flex;gap:22px;list-style:none}
+.links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink)}
+.links a:hover{color:var(--purple)}
+.burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--deep);cursor:pointer}
+/* hero */
+.hero{background:var(--soft);padding:70px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;color:var(--deep)}
+.hero .role{font-size:1.2rem;font-weight:700;color:var(--purple);margin:14px 0 10px}
+.hero p{color:var(--muted);max-width:46ch}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--purple);transition:transform .2s,background .2s}
+.btn.main{background:var(--purple);color:#fff}
+.btn.main:hover{background:var(--deep);transform:translateY(-2px)}
+.btn.ghost{color:var(--purple);background:#fff}
+.btn.ghost:hover{background:var(--soft)}
+.portrait{position:relative;width:min(100%,380px);margin:0 auto;aspect-ratio:1;border-radius:50%;background:var(--lav);border:10px solid #fff;box-shadow:0 20px 50px rgba(75,42,153,.22)}
+.portrait img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.cloud{position:absolute;left:-8%;right:-8%;bottom:-16%;height:30%;background:#fff;border-radius:60px;box-shadow:0 8px 24px rgba(75,42,153,.12)}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud::before{width:42%;aspect-ratio:1;left:8%;bottom:30%}
+.cloud::after{width:34%;aspect-ratio:1;right:10%;bottom:30%}
+.cloud span{position:absolute;inset:0;display:grid;place-items:center;font-weight:700;color:var(--purple);font-size:.95rem;z-index:2}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.facts{background:var(--soft);border-radius:24px;padding:28px;list-style:none}
+.facts li{padding:10px 0;border-bottom:1px solid #d9ccf5}
+.facts li:last-child{border:0}
+.facts b{display:block;color:var(--deep);font-size:.9rem}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--soft);border-radius:22px;padding:24px;box-shadow:0 6px 22px rgba(109,63,199,.07)}
+.card h3{font-size:1.2rem;color:var(--deep);margin-bottom:8px}
+.ph{aspect-ratio:4/5;border-radius:16px;background:repeating-linear-gradient(135deg,var(--soft),var(--soft) 12px,#e6dbfb 12px,#e6dbfb 24px);display:grid;place-items:center;text-align:center;padding:12px;color:var(--deep);font-size:.9rem;overflow:hidden;margin-bottom:12px}
+.ph.wide{aspect-ratio:16/10}
+.ph img{width:100%;height:100%;object-fit:cover}
+.gal-title{font-weight:700;color:var(--deep)}
+.badge{display:inline-block;background:var(--soft);color:var(--deep);font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.note{background:var(--soft);border-left:5px solid var(--purple);border-radius:12px;padding:14px 18px;margin-bottom:28px;color:var(--deep)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:12px;font-size:.78rem}
+.cal div{background:var(--mist);border:1px solid var(--soft);border-radius:10px;padding:8px 4px;text-align:center}
+.cal b{display:block;color:var(--purple)}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:var(--soft);color:var(--deep);padding:9px 18px;border-radius:999px;font-weight:500}
+.tag.tech{background:var(--deep);color:#fff}
+.sub{margin:30px 0 14px;font-size:1.15rem;color:var(--purple)}
+.contact a,.contact span.empty{display:block;padding:12px 0;border-bottom:1px solid var(--soft)}
+.contact .empty{color:var(--muted);font-style:italic}
+.contact a{color:var(--purple);font-weight:700;text-decoration:none}
+footer{background:var(--deep);color:#e9defd;text-align:center;padding:26px 0;font-size:.95rem}
+/* tablet + phone */
+@media(max-width:820px){
+ .hero .wrap,.about{grid-template-columns:1fr}
+ .portrait{order:-1;width:min(78%,300px)}
+ .hero{text-align:center;padding-top:40px}.hero p{margin:0 auto}.btns{justify-content:center}
+ .burger{display:block}
+ .links{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 22px 16px;border-bottom:1px solid var(--soft)}
+ .links.open{display:flex}.links a{display:block;padding:12px 0}
+ section{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     EDIT HERE  (this is the ONLY part you need to change)
+     Change the words between the quote marks " ".
+     Do not delete the quote marks, commas or brackets.
+     ============================================================ -->
+<script>
+const ME = {
+  photo: "photo.jpg",              // your profile picture file name
+
+  // CONTACT: replace the empty "" with your real details. Leave "" to show a placeholder.
+  email: "",                       // example: "yourname@gmail.com"
+  instagram: "",                   // example: "https://www.instagram.com/your_username"
+  linkedin: "",                    // example: "https://www.linkedin.com/in/your-name"
+  projectLink: "",                 // optional: link to your project (GitHub etc.)
+
+  // MY CREATIVE WORK: put your own picture file names between the quotes.
+  // Example: image: "post1.jpg"  (the picture must be in the same folder as this file)
+  gallery: [
+    { title: "Instagram Posts",   image: "", wide: false },
+    { title: "Reel Covers",       image: "", wide: false },
+    { title: "Reel Editing",      image: "", wide: true  },
+    { title: "Photo Editing",     image: "", wide: false },
+    { title: "Instagram Stories", image: "", wide: false }
+  ]
+};
+</script>
+<!-- ============================================================ -->
+
+<nav>
+ <div class="wrap">
+  <a class="logo" href="#home">Johnvi B</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  <ul class="links" id="links">
+   <li><a href="#about">About</a></li>
+   <li><a href="#work">My Work</a></li>
+   <li><a href="#practice">Practice</a></li>
+   <li><a href="#skills">Skills</a></li>
+   <li><a href="#education">Education</a></li>
+   <li><a href="#project">Project</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </div>
+</nav>
+
+<!-- HOME -->
+<header class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <h1>Hi, I'm Johnvi B</h1>
+   <p class="role">Creative Content Creator | Aspiring Digital Marketer</p>
+   <p>I edit posts, Reels and photos, and I'm learning how creative content connects with an audience.</p>
+   <div class="btns">
+    <a class="btn main" href="#work">Explore My Work</a>
+    <a class="btn ghost" href="#contact">Contact Me</a>
+   </div>
+  </div>
+  <div class="portrait">
+   <img id="photo" alt="Portrait of Johnvi B" src="photo.jpg">
+   <div class="cloud"><span>Open to a Digital Marketing Internship</span></div>
+  </div>
+ </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+ <div class="wrap about">
+  <div>
+   <h2>About Me</h2>
+   <p>I am a fresher who is passionate about creativity, Instagram post editing, Reel editing, photo editing and social media content creation. I enjoy editing my own Instagram posts and Reels.</p>
+   <p style="margin-top:14px">I love trying different creative styles, colours, layouts and visual ideas. I am interested in learning digital marketing and how creative content connects with an audience. I am enthusiastic, creative, willing to learn and excited to start my career.</p>
+  </div>
+  <ul class="facts">
+   <li><b>Studying</b>B.Sc. Artificial Intelligence and Machine Learning</li>
+   <li><b>Graduating</b>2027 (expected)</li>
+   <li><b>Looking for</b>Digital Marketing Internship</li>
+  </ul>
+ </div>
+</section>
+
+<!-- MY CREATIVE WORK -->
+<section id="work" class="alt">
+ <div class="wrap">
+  <h2>My Creative Work</h2>
+  <p class="lead">A space for the posts, Reels and photos I edit. The boxes below are placeholders until I add my own work.</p>
+  <div class="grid" id="gallery"></div>
+ </div>
+</section>
+
+<!-- PRACTICE WORK -->
+<section id="practice">
+ <div class="wrap">
+  <h2>Practice Work</h2>
+  <p class="note"><b>Please note:</b> these are sample concepts I made to practise. They are not real client projects and have no real results.</p>
+  <div class="grid">
+   <article class="card">
+    <span class="badge">Practice work · fictional brand</span>
+    <h3>Skincare promotional post</h3>
+    <p>Concept for a made-up brand, "Glowly".</p>
+    <ul style="margin:10px 0 0 18px"><li>Soft lavender background with a clean product-style layout</li><li>Headline idea: "Your daily glow, made simple"</li><li>Caption with a short tip and a question to start comments</li></ul>
+   </article>
+   <article class="card">
+    <span class="badge">Practice work · concept</span>
+    <h3>Fashion post</h3>
+    <p>A style-focused post concept built around colour.</p>
+    <ul style="margin:10px 0 0 18px"><li>One colour story across the whole post</li><li>Close-up details plus a full-look photo in a carousel</li><li>Caption asking followers to share their favourite look</li></ul>
+   </article>
+   <article class="card" style="grid-column:1/-1">
+    <span class="badge">Practice work · sample plan</span>
+    <h3>Instagram content calendar (one week)</h3>
+    <p>A sample weekly mix of content types for a fictional page.</p>
+    <div class="cal" id="cal"></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="alt">
+ <div class="wrap">
+  <h2>Skills and Interests</h2>
+  <div class="tags" id="skills-list"></div>
+  <h3 class="sub">Technical Background</h3>
+  <div class="tags" id="tech-list"></div>
+ </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+ <div class="wrap">
+  <h2>Education</h2>
+  <article class="card">
+   <span class="badge">Currently pursuing</span>
+   <h3>B.Sc. Artificial Intelligence and Machine Learning</h3>
+   <p>Dr. N.G.P. Arts and Science College, Coimbatore</p>
+   <p style="color:var(--muted)">Expected graduation: 2027</p>
+  </article>
+ </div>
+</section>
+
+<!-- ACADEMIC PROJECT -->
+<section id="project" class="alt">
+ <div class="wrap">
+  <h2>Academic Project</h2>
+  <article class="card">
+   <span class="badge">College project</span>
+   <h3>Smart Document Summarizer Using NLP</h3>
+   <p>A project that uses Natural Language Processing (NLP) to turn a long document into a shorter summary. It was developed using Python, with a simple web interface built in Streamlit.</p>
+   <div class="tags" style="margin-top:14px"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">NLP</span></div>
+   <div id="project-link" style="margin-top:14px"></div>
+  </article>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+ <div class="wrap" style="max-width:640px">
+  <h2>Contact</h2>
+  <p class="lead">I would love to learn and grow with a digital marketing team. Let's connect.</p>
+  <div class="contact" id="contact-list"></div>
+ </div>
+</section>
+
+<footer>&copy; 2026 Johnvi B</footer>
+
+<!-- DESIGN PART: builds the page from the EDIT HERE block above -->
+<script>
+const $ = id => document.getElementById(id);
+$('photo').src = ME.photo;
+$('photo').onerror = function(){ this.style.display='none'; };
+
+$('gallery').innerHTML = ME.gallery.map(g => `
+  <div class="card">
+    <div class="ph ${g.wide ? 'wide' : ''}">${g.image ? `<img src="${g.image}" alt="${g.title}">` : 'Placeholder<br>Add your work here'}</div>
+    <div class="gal-title">${g.title}</div>
+  </div>`).join('');
+
+const days = [['Mon','Tip post'],['Tue','Reel'],['Wed','Behind the scenes'],['Thu','Story poll'],['Fri','Carousel'],['Sat','Photo edit'],['Sun','Q&amp;A']];
+$('cal').innerHTML = days.map(d => `<div><b>${d[0]}</b>${d[1]}</div>`).join('');
+
+const skills = ['Creative Thinking','Instagram Post Editing','Reel Editing','Photo Editing','Content Ideas','Visual Storytelling','Social Media Content Creation','Willingness to Learn Digital Marketing'];
+const tech = ['Python','Basic C / C++ / Java','Machine Learning','NLP','Generative AI'];
+$('skills-list').innerHTML = skills.map(s => `<span class="tag">${s}</span>`).join('');
+$('tech-list').innerHTML = tech.map(s => `<span class="tag tech">${s}</span>`).join('');
+
+const rows = [
+  ['Email', ME.email, ME.email && 'mailto:' + ME.email, ME.email],
+  ['Instagram', ME.instagram, ME.instagram, 'Instagram'],
+  ['LinkedIn', ME.linkedin, ME.linkedin, 'LinkedIn']
+];
+$('contact-list').innerHTML = rows.map(r => r[1]
+  ? `<a href="${r[2]}" target="_blank" rel="noopener">${r[0]}: ${r[3]}</a>`
+  : `<span class="empty">${r[0]}: add yours in the EDIT HERE section</span>`).join('');
+if (ME.projectLink) $('project-link').innerHTML = `<a class="btn ghost" href="${ME.projectLink}" target="_blank" rel="noopener">View project</a>`;
+
+const burger = $('burger'), links = $('links');
+burger.onclick = () => { const o = links.classList.toggle('open'); burger.setAttribute('aria-expanded', o); };
+links.onclick = e => { if (e.target.tagName === 'A') { links.classList.remove('open'); burger.setAttribute('aria-expanded', false); } };
+</script>
+</body>
+</html>
